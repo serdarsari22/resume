@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projectstyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="images/project.jpg" class="banner">
+        <a href="index.html" class="logo">Serdar.</a>
+        <div class="toggle"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!---->
+    
+    <div class="gap">
+        
+    </div>
+    
+
+
+    <section class="sec1">
+        <div class="box box1"><img src="images/mac.PNG" ></div> 
+        <div class="box box2"><img src="images/web.PNG" ></div>  
+    
+         
+    </section>
+
+    <section class="sec2">
+        <div class="box box6"><img src="images/mac.PNG" ></div> 
+        <div class="box box3"><img src="images/hava.PNG" ></div>  
+    
+        
+    </section>
+
+    <section class="sec3">
+        <div class="box box7"><img src="images/mac.PNG" ></div>
+        <div class="box box4"><img src="images/grocery.PNG" ></div>  
+      
+         
+    </section>
+
+
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
+    <script>
+        window.addEventListener("scroll",function(){
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky',window.scrollY > 0)
+        });
+        const navigation = document.querySelector('nav');
+        document.querySelector('.toggle').onclick = function(){
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+
+    
+    <script type="text/javascript">
+        gsap.timeline({
+            scrollTrigger:{
+                trigger: ".sec1",
+                start: "center center",
+                end: "bottom top",
+                scrub: true,
+                markers: false,
+                pin: true
+            }
+
+        })
+        
+        .from(".box1", {x : innerWidth * 1})
+        .from(".box2", {x : innerWidth * -1})
+        
+    </script>
+
+
+
+    <script type="text/javascript">
+        gsap.timeline({
+            scrollTrigger:{
+                trigger: ".sec2",
+                start: "center center",
+                end: "bottom top",
+                scrub: true,
+                markers: false,
+                pin: true
+            }
+
+        })
+        
+        .from(".box6", {x : innerWidth * 1})
+        .from(".box3", {x : innerWidth * -1})
+    </script>
+
+
+
+    <script type="text/javascript">
+        gsap.timeline({
+            scrollTrigger:{
+                trigger: ".sec3",
+                start: "center center",
+                end: "bottom top",
+                scrub: true,
+                markers: false,
+                pin: true
+            }
+
+        })
+        
+        .from(".box7", {x : innerWidth * 1})
+        .from(".box4", {x : innerWidth * -1})
+    </script>
+
+
+
+
+    
+  
+</body>
+</html>

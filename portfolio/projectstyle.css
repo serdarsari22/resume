@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+body{
+    overflow-x: hidden;
+    background-color: #aaaaaa52;
+}
+/*
+body::before{
+    background: linear-gradient(45deg, #e91e63, #e91e63 50%,
+    #ffc107 50%, #ffc107);
+}
+body::after{
+    background: linear-gradient(160deg,#03a9f4,#03a9f4 50%,
+    transparent 50%, transparent);
+}*/
+/* header başlangıç */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0 100px;
+    background: #000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 1s;
+    z-index: 14;
+    
+}
+
+header.sticky{
+    height: 100px;
+}
+
+header.sticky .logo{
+    position: absolute;
+    font-size: 3em;
+    left: 100px;
+    transform: translate(0,-50%);
+}
+
+header .banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+header.sticky .banner{
+    opacity: 0.5;
+}
+header .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 15vw;
+    color: #fff;
+    font-weight: 700;
+    transition: 1s;
+    text-decoration: none;
+    z-index: 1;
+
+}
+
+nav{
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+
+nav ul{
+    position: relative;
+    display: flex;
+    transition: 0.25s;
+    transform: translateX(100px);
+    opacity: 0;
+}
+header.sticky nav ul{
+    transform: translateX(0);
+    opacity: 1;
+    transition-delay: 0.75s;
+    visibility: visible;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    color: #fff;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: #ff275f;
+}
+
+@media (max-width: 991px){
+    section,
+    header{
+        padding: 40px;
+    }
+
+    section h2{
+        font-size: 2em;
+    }
+
+    header.sticky .logo{
+        left: 40px;
+    }
+
+    header.sticky .banner{
+        opacity: 0;
+    }
+
+    nav ul{
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav.active ul{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 90vh;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 1;
+    }
+
+
+    nav ul li a{
+        font-size: 1.5em;
+        padding: 5px 15px;
+    }
+   
+    header.sticky .toggle{
+        position: fixed;
+        top: 15px;
+        right: 40px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background: #fff url(images/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    header.sticky .toggle.active{
+        background: #fff url(images/close.png);
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+/* header bitiş */
+
+section{
+   
+    min-height: 100vh;
+}
+/*
+.sec0 .box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 1500px;
+    transform: translate(-50%,-50%);
+}
+
+.sec0 .box img{
+    max-width: 100%;
+}
+
+.box0{
+    width: 935px;
+}
+.box8{
+    width: 935px;
+    height: auto;
+    margin-left: 33px;
+    padding-top: 10px;
+}*/
+.gap{
+    width: 100%;
+    height: 500px;
+}
+.sec1 .box{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    max-width: 1500px;
+    transform: translate(-50%,-50%);
+}
+
+.sec1 .box img{
+    max-width: 100%;
+}
+
+.box1{
+    width: 935px;
+}
+.box2{
+    width: 935px;
+    margin-left: 35px;
+    padding-top: 6px;
+}
+
+
+.sec2 .box{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    max-width: 1500px;
+    transform: translate(-50%,-50%);
+}
+.sec2 .box img{
+    max-width: 100%;
+}
+
+.box6{
+    width: 935px;
+}
+.box3{
+    width: 935px;
+    height: auto;
+    margin-left: 33px;
+    padding-top: 15px;
+}
+
+.sec3 .box{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    max-width: 1500px;
+    transform: translate(-50%,-50%);
+}
+
+.sec3 .box img{
+    max-width: 100%;
+}
+
+.box7{
+    width: 935px;
+}
+.box4{
+    width: 935px;
+    height: auto;
+    margin-left: 30px;
+    padding-top: 15px;
+}
+
+
+/* kırmızı sarı mavi bg */
+/*
+
+.bg{
+    width: 500px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+.bg::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,#e91e63,#e91e63 50%,
+    #ffc107 50%, #ffc107);
+}
+
+.bg::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(160deg,#03a9f4,#03a9f4 50%,
+    transparent 50%, transparent);
+
+}*/

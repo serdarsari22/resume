@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serdar Sarı</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Rubik:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.js"></script>
+    <!--<script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "905384852000",
+                position: "right",
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>-->
+</head>
+<body>
+    <header>
+        <img src="images/ytu.jpg" class="banner">
+        <a href="index.html" class="logo">Serdar.</a>
+        <div class="toggle"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="foto"></div>
+        <br><br>
+        <div class="content">
+            <h1> HI! I Am </h1>
+            <h1>Serdar Sarı</h1><br>
+           <!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p> <br><br>-->
+        </div>
+        
+        <div class="right">
+
+            
+            
+            <div class="clock">
+                <div class="hour" id="hour">
+                    <div class="hr"></div>
+                </div>
+                <div class="min" id="min">
+                    <div class="mn"></div>
+                </div>
+                <div class="sec" id="sec">
+                    <div class="sc"></div>
+                </div>
+            </div>
+
+            
+        </div>
+        
+      
+        
+    </section>
+
+ 
+    <footer>
+        <div class="contact">
+
+            <ul>
+                <li class="github"><a href="https://github.com/serdarsari22"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                <li class="in"><a href="www.linkedin.com/in/serdar-sarı"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li class="gmail"><a href="gmailto:serdar.sr22@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                <li class="wa"><a href="https://api.whatsapp.com/send/?phone=905384852000&text&type=phone_number&app_absent=0"><i class='fa fa-whatsapp' undefined ></i></a></li>
+                <li class="pdf"><a href=""><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a></li>
+            </ul>
+            
+        </div>
+    </footer>
+    <script>
+        window.addEventListener("scroll",function(){
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky',window.scrollY > 0)
+        });
+        const navigation = document.querySelector('nav');
+        document.querySelector('.toggle').onclick = function(){
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+    <script>
+        window.addEventListener("scroll",function(){
+            const header = document.querySelector('section');
+            header.classList.toggle('left',window.scrollY > 0)
+        });
+        
+    </script>
+    <script>
+        window.addEventListener("scroll",function(){
+            const header = document.querySelector('footer');
+            header.classList.toggle('last',window.scrollY > 0)
+        });
+        
+    </script>
+    <script>
+        function clockInit(){
+            var date = new Date();
+            var time = [date.getHours(), date.getMinutes(), date.getSeconds()];
+            var clockDivs = [document.getElementById("hour"), document.getElementById("min"), document.getElementById("sec")];
+            
+            var hour = time[1]/2+time[0]*30;
+            
+            clockDivs[0].style.transform="rotate("+ hour +"deg)";
+            clockDivs[1].style.transform="rotate("+ time[1]*6 +"deg)";
+            clockDivs[2].style.transform="rotate("+ time[2]*6 +"deg)";
+        }
+
+        window.onload = function() {
+            // Load clockInit function
+            clockInit();
+            
+            // Call clockInit function at 1 second interval
+            setInterval(clockInit, 1000);
+        };
+    </script>
+    
+    <script src="particles.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/ba40305079.js" crossorigin="anonymous"></script>
+</body>
+</html>
